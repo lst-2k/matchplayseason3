@@ -267,12 +267,11 @@ function renderHistory(history) {
         const labelText = w.label || "";
         const labelLower = labelText.toLowerCase();
         
-        // Define match types for styling[cite: 1]
+        // Match types for styling
         const isSemi = labelLower.includes("semi");
         const isPlayOff = labelLower.includes("play off");
         const isFinal = labelLower.includes("final") && !isSemi;
 
-        // Determine bar style based on your requirements[cite: 1]
         let barStyle = "";
         let labelStyle = "";
 
@@ -280,7 +279,7 @@ function renderHistory(history) {
             barStyle = "background: silver; color: black;";
             labelStyle = "color: black; border-left-color: #555;";
         } else if (isPlayOff) {
-            barStyle = "background: #cd7f32; color: white;"; // Bronze color
+            barStyle = "background: #cd7f32; color: white;"; 
             labelStyle = "color: white; border-left-color: white;";
         } else if (isFinal) {
             barStyle = "background: #222; color: gold;";
@@ -293,8 +292,10 @@ function renderHistory(history) {
 
         let matchesHtml = w.results.map(r => {
             let resTxt = "v", resCls = "";
+            
             if (r.walkover) {
-                resTxt = "W / O";
+                const winner = r.walkover === 'p1' ? r.p1 : r.p2;
+                resTxt = `${winner} wins W/O`;
                 resCls = r.walkover === 'p1' ? "p1-txt" : "p2-txt";
             } else {
                 let diff = 0, played = false, last = 0;
@@ -303,19 +304,24 @@ function renderHistory(history) {
                     if(!isNaN(v1) && !isNaN(v2)) { played = true; last = i+1; if(v1 < v2) diff++; else if(v2 < v1) diff--; }
                 }
                 if(played) {
-                    if(diff === 0) { resTxt = "A / S"; resCls = "tie-txt"; }
-                    else {
+                    if(diff === 0) { 
+                        resTxt = "All Square"; 
+                        resCls = "tie-txt"; 
+                    } else {
                         const abs = Math.abs(diff), rem = 18 - last;
-                        resTxt = (abs > rem) ? (rem === 0 ? "1 UP" : `${abs} & ${rem}`) : `${abs} UP`;
+                        const scoreStr = (abs > rem) ? (rem === 0 ? "1 UP" : `${abs}&${rem}`) : `${abs} UP`;
+                        const winnerName = diff > 0 ? r.p1 : r.p2;
+                        resTxt = `${winnerName} wins ${scoreStr}`;
                         resCls = diff > 0 ? "p1-txt" : "p2-txt";
                     }
                 }
             }
-            return `<div class="hist-match-row">
-                <div class="hist-player-left p1-txt">${r.p1}</div>
-                <div class="hist-result-center ${resCls}">${resTxt}</div>
-                <div class="hist-player-right p2-txt">${r.p2}</div>
-            </div>`;
+            return `
+                <div class="hist-match-row">
+                    <div class="hist-player-left p1-txt">${r.p1}</div>
+                    <div class="hist-result-center ${resCls}" style="font-size: 0.65rem; font-weight: bold; white-space: nowrap;">${resTxt}</div>
+                    <div class="hist-player-right p2-txt">${r.p2}</div>
+                </div>`;
         }).join('');
 
         return `
@@ -331,6 +337,7 @@ function renderHistory(history) {
                 </div>
             </details>`;
     }).join('');
+}
 }
 loadData();
 </script>
