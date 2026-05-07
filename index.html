@@ -142,7 +142,7 @@ function renderMatches(matches) {
         let bTxt = "Match Pending", bCol = "#555";
         if (m.walkover) {
             const winner = m.walkover === 'p1' ? m.p1Name : m.p2Name;
-            bTxt = `WALKOVER: ${winner}`;
+            bTxt = `${winner} wins W/O`; // Updated format
             bCol = "#777";
         } else {
             let p1S = 0, lastH = 0;
@@ -155,7 +155,9 @@ function renderMatches(matches) {
                 else {
                     const abs = Math.abs(p1S), rem = 18 - lastH;
                     const winner = p1S > 0 ? m.p1Name : m.p2Name;
-                    bTxt = (abs > rem) ? (rem === 0 ? `${winner} 1 Up` : `${winner} ${abs} & ${rem}`) : `${winner} ${abs} Up`;
+                    // Updated string format to include "wins"
+                    const scoreStr = (abs > rem) ? (rem === 0 ? `1 Up` : `${abs} & ${rem}`) : `${abs} Up`;
+                    bTxt = `${winner} wins ${scoreStr}`;
                     bCol = p1S > 0 ? "var(--p1-color)" : "var(--p2-color)";
                 }
             }
@@ -267,11 +269,12 @@ function renderHistory(history) {
         const labelText = w.label || "";
         const labelLower = labelText.toLowerCase();
         
-        // Match types for styling
+        // Define match types for styling[cite: 1]
         const isSemi = labelLower.includes("semi");
         const isPlayOff = labelLower.includes("play off");
         const isFinal = labelLower.includes("final") && !isSemi;
 
+        // Determine bar style based on your requirements[cite: 1]
         let barStyle = "";
         let labelStyle = "";
 
@@ -279,7 +282,7 @@ function renderHistory(history) {
             barStyle = "background: silver; color: black;";
             labelStyle = "color: black; border-left-color: #555;";
         } else if (isPlayOff) {
-            barStyle = "background: #cd7f32; color: white;"; 
+            barStyle = "background: #cd7f32; color: white;"; // Bronze color
             labelStyle = "color: white; border-left-color: white;";
         } else if (isFinal) {
             barStyle = "background: #222; color: gold;";
@@ -292,10 +295,8 @@ function renderHistory(history) {
 
         let matchesHtml = w.results.map(r => {
             let resTxt = "v", resCls = "";
-            
             if (r.walkover) {
-                const winner = r.walkover === 'p1' ? r.p1 : r.p2;
-                resTxt = `${winner} wins W/O`;
+                resTxt = "W / O";
                 resCls = r.walkover === 'p1' ? "p1-txt" : "p2-txt";
             } else {
                 let diff = 0, played = false, last = 0;
@@ -304,24 +305,19 @@ function renderHistory(history) {
                     if(!isNaN(v1) && !isNaN(v2)) { played = true; last = i+1; if(v1 < v2) diff++; else if(v2 < v1) diff--; }
                 }
                 if(played) {
-                    if(diff === 0) { 
-                        resTxt = "All Square"; 
-                        resCls = "tie-txt"; 
-                    } else {
+                    if(diff === 0) { resTxt = "A / S"; resCls = "tie-txt"; }
+                    else {
                         const abs = Math.abs(diff), rem = 18 - last;
-                        const scoreStr = (abs > rem) ? (rem === 0 ? "1 UP" : `${abs}&${rem}`) : `${abs} UP`;
-                        const winnerName = diff > 0 ? r.p1 : r.p2;
-                        resTxt = `${winnerName} wins ${scoreStr}`;
+                        resTxt = (abs > rem) ? (rem === 0 ? "1 UP" : `${abs} & ${rem}`) : `${abs} UP`;
                         resCls = diff > 0 ? "p1-txt" : "p2-txt";
                     }
                 }
             }
-            return `
-                <div class="hist-match-row">
-                    <div class="hist-player-left p1-txt">${r.p1}</div>
-                    <div class="hist-result-center ${resCls}" style="font-size: 0.65rem; font-weight: bold; white-space: nowrap;">${resTxt}</div>
-                    <div class="hist-player-right p2-txt">${r.p2}</div>
-                </div>`;
+            return `<div class="hist-match-row">
+                <div class="hist-player-left p1-txt">${r.p1}</div>
+                <div class="hist-result-center ${resCls}">${resTxt}</div>
+                <div class="hist-player-right p2-txt">${r.p2}</div>
+            </div>`;
         }).join('');
 
         return `
