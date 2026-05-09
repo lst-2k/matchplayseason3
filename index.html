@@ -133,42 +133,65 @@ function getSum(arr, start, end) {
 function renderMatches(matches) {
     const container = document.getElementById('carousel');
     container.innerHTML = '';
-    if(!matches || matches.length === 0) { container.innerHTML = "<p style='text-align:center;width:100%;padding:20px;'>No active matches.</p>"; return; }
+    if(!matches || matches.length === 0) { 
+        container.innerHTML = "<p style='text-align:center;width:100%;padding:20px;'>No active matches.</p>"; 
+        return; 
+    }
     
     matches.forEach(m => {
         const div = document.createElement('div');
         div.className = 'carousel-item';
         
         let bTxt = "Match Pending", bCol = "#555";
+        
         if (m.walkover) {
             const winner = m.walkover === 'p1' ? m.p1Name : m.p2Name;
-            bTxt = `${winner} wins W/O`; // Updated format
-            bCol = "#777";
+            bTxt = `${winner} wins W/O`; 
+            bCol = m.walkover === 'p1' ? "var(--p1-color)" : "var(--p2-color)";
         } else {
             let p1S = 0, lastH = 0;
+            // Calculate current match status
             for(let i=0; i<18; i++) {
                 let s1 = parseInt(m.p1Scores[i]), s2 = parseInt(m.p2Scores[i]);
-                if(!isNaN(s1) && !isNaN(s2)) { lastH = i+1; if(s1 < s2) p1S++; else if(s2 < s1) p1S--; }
+                if(!isNaN(s1) && !isNaN(s2)) { 
+                    lastH = i+1; 
+                    if(s1 < s2) p1S++; else if(s2 < s1) p1S--; 
+                }
             }
+
             if(lastH > 0) {
-                if(p1S === 0) bTxt = "All Square";
-                else {
-                    const abs = Math.abs(p1S), rem = 18 - lastH;
-                    const winner = p1S > 0 ? m.p1Name : m.p2Name;
-                    // Updated string format to include "wins"
-                    const scoreStr = (abs > rem) ? (rem === 0 ? `1 Up` : `${abs} & ${rem}`) : `${abs} Up`;
+                const abs = Math.abs(p1S);
+                const rem = 18 - lastH;
+                const winner = p1S > 0 ? m.p1Name : m.p2Name;
+
+                if (p1S === 0 && lastH === 18) {
+                    bTxt = "Match Halved (A/S)";
+                    bCol = "var(--tie-color)";
+                } else if (abs > rem || lastH === 18) {
+                    // Match is finished
+                    const scoreStr = (lastH === 18) ? `${abs} Up` : `${abs} & ${rem}`;
                     bTxt = `${winner} wins ${scoreStr}`;
                     bCol = p1S > 0 ? "var(--p1-color)" : "var(--p2-color)";
+                } else {
+                    // Match is in progress
+                    bTxt = (p1S === 0) ? "All Square" : `${winner} ${abs} Up`;
+                    bCol = (p1S === 0) ? "#555" : (p1S > 0 ? "var(--p1-color)" : "var(--p2-color)");
                 }
             }
         }
         
-        div.innerHTML = `<div class="match-container">
-            <div class="card-header"><span class="p1-txt">${m.p1Name}</span><span style="font-size:0.6rem;font-weight:normal;color:#888">VS</span><span class="p2-txt">${m.p2Name}</span></div>
-            <div class="venue-row">${m.venue || 'TBA'}</div>
-            <div class="match-result-banner" style="background:${bCol}">${bTxt}</div>
-            ${renderSubTable(m, 0, 'OUT')}${renderSubTable(m, 9, 'IN', true)}
-        </div>`;
+        div.innerHTML = `
+            <div class="match-container">
+                <div class="card-header">
+                    <span class="p1-txt">${m.p1Name}</span>
+                    <span style="font-size:0.6rem;font-weight:normal;color:#888">VS</span>
+                    <span class="p2-txt">${m.p2Name}</span>
+                </div>
+                <div class="venue-row">${m.venue || 'TBA'}</div>
+                <div class="match-result-banner" style="background:${bCol}">${bTxt}</div>
+                ${renderSubTable(m, 0, 'OUT')}
+                ${renderSubTable(m, 9, 'IN', true)}
+            </div>`;
         container.appendChild(div);
     });
 }
