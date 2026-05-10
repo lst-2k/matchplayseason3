@@ -169,6 +169,7 @@ function renderMatches(matches) {
                     bCol = "var(--tie-color)";
                 } else if (abs > rem || lastH === 18) {
                     // Match is finished
+                    // If it ends on 18, show "Up". If it ends earlier, show "&" (e.g., 2 & 1)
                     const scoreStr = (lastH === 18) ? `${abs} Up` : `${abs} & ${rem}`;
                     bTxt = `${winner} wins ${scoreStr}`;
                     bCol = p1S > 0 ? "var(--p1-color)" : "var(--p2-color)";
