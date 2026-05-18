@@ -491,7 +491,7 @@
           "walkover": null
         },
         {
-          "html": "Horusphoenix v <span class=\"win-p2\">Huckleberry8448 Wins 0 Up</span>",
+          "html": "<b>Horusphoenix (W/O)</b> v Huckleberry8448",
           "p1": "Horusphoenix",
           "p2": "Huckleberry8448",
           "scores": {
@@ -536,7 +536,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "Polekatt v <span class=\"win-p2\">x3offthetee Wins 1 Up</span>",
@@ -981,7 +981,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1778578600199,
