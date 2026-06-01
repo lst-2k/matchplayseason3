@@ -1319,7 +1319,7 @@
           "walkover": null
         },
         {
-          "html": "Geordieboy85 v <span class=\"win-p2\">Tenbobnote Wins 0 Up</span>",
+          "html": "<b>Geordieboy85 (W/O)</b> v Tenbobnote",
           "p1": "Geordieboy85",
           "p2": "Tenbobnote",
           "scores": {
@@ -1364,7 +1364,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "<span class=\"win-p1\">Wins 1 Up Horusphoenix</span> v Arfabubble",
@@ -1828,7 +1828,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1779904347414,
