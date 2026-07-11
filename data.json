@@ -3611,7 +3611,7 @@
           "walkover": null
         },
         {
-          "html": "WingisBack v <span class=\"win-p2\">Keep_of_Kalessin Wins 0 Up</span>",
+          "html": "WingisBack v <b>Keep_of_Kalessin (W/O)</b>",
           "p1": "WingisBack",
           "p2": "Keep_of_Kalessin",
           "scores": {
@@ -3656,7 +3656,7 @@
               "3"
             ]
           },
-          "walkover": null
+          "walkover": "p2"
         },
         {
           "html": "Bart-NoWorries v <span class=\"win-p2\">Horusphoenix Wins 0 Up</span>",
@@ -3851,25 +3851,25 @@
           "walkover": null
         },
         {
-          "html": "Polekatt v <span class=\"win-p2\">Colly45x Wins 0 Up</span>",
+          "html": "Polekatt v <span class=\"win-p2\">Colly45x Wins 5&4</span>",
           "p1": "Polekatt",
           "p2": "Colly45x",
           "scores": {
             "p1": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
+              "4",
+              "4",
+              "4",
+              "5",
+              "4",
+              "4",
+              "3",
+              "4",
+              "3",
+              "5",
+              "3",
+              "5",
+              "4",
+              "4",
               "",
               "",
               "",
@@ -3890,10 +3890,10 @@
               "4",
               "3",
               "4",
-              "4",
-              "3",
-              "4",
-              "3"
+              "",
+              "",
+              "",
+              ""
             ]
           },
           "walkover": null
@@ -4101,7 +4101,7 @@
         "3",
         "3"
       ],
-      "walkover": null
+      "walkover": "p2"
     },
     {
       "id": 1783419932456,
@@ -4397,20 +4397,20 @@
         "4"
       ],
       "p1Scores": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "4",
+        "4",
+        "4",
+        "5",
+        "4",
+        "4",
+        "3",
+        "4",
+        "3",
+        "5",
+        "3",
+        "5",
+        "4",
+        "4",
         "",
         "",
         "",
@@ -4431,10 +4431,10 @@
         "4",
         "3",
         "4",
-        "4",
-        "3",
-        "4",
-        "3"
+        "",
+        "",
+        "",
+        ""
       ],
       "walkover": null
     }
