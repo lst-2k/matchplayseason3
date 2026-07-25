@@ -329,14 +329,17 @@ function renderHistory(history) {
                     if(!isNaN(v1) && !isNaN(v2)) { played = true; last = i+1; if(v1 < v2) diff++; else if(v2 < v1) diff--; }
                 }
                 if(played) {
-                    if(diff === 0) { resTxt = "A / S"; resCls = "tie-txt"; }
-                    else {
-                        const abs = Math.abs(diff), rem = 18 - last;
-                        resTxt = (abs > rem) ? (rem === 0 ? "1 UP" : `${abs} & ${rem}`) : `${abs} UP`;
-                        resCls = diff > 0 ? "p1-txt" : "p2-txt";
-                    }
-                }
-            }
+					if(diff === 0) { resTxt = "A / S"; resCls = "tie-txt"; }
+					else {
+						const abs = Math.abs(diff), rem = 18 - last;
+						if (last === 18) {
+							resTxt = `${abs} UP`;
+						} else {
+							resTxt = (abs > rem) ? `${abs} & ${rem}` : `${abs} UP`;
+						}
+						resCls = diff > 0 ? "p1-txt" : "p2-txt";
+					}
+				}
             return `<div class="hist-match-row">
                 <div class="hist-player-left p1-txt">${r.p1}</div>
                 <div class="hist-result-center ${resCls}">${resTxt}</div>
