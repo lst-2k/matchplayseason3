@@ -4295,7 +4295,7 @@
       "label": "Week 12 @ Adare Manor",
       "results": [
         {
-          "html": "BIGavoLEO v <span class=\"win-p2\">Keep_of_Kalessin Wins Pending</span>",
+          "html": "BIGavoLEO v <b>Keep_of_Kalessin (W/O)</b>",
           "p1": "BIGavoLEO",
           "p2": "Keep_of_Kalessin",
           "scores": {
@@ -4340,10 +4340,10 @@
               "6"
             ]
           },
-          "walkover": null
+          "walkover": "p2"
         },
         {
-          "html": "Rendallio v <span class=\"win-p2\">Horusphoenix Wins Pending</span>",
+          "html": "Rendallio v <b>Horusphoenix (W/O)</b>",
           "p1": "Rendallio",
           "p2": "Horusphoenix",
           "scores": {
@@ -4388,7 +4388,7 @@
               "5"
             ]
           },
-          "walkover": null
+          "walkover": "p2"
         },
         {
           "html": "Hammers1man72 v <span class=\"win-p2\">x3offthetee Wins 6 & 5</span>",
@@ -4487,7 +4487,7 @@
           "walkover": null
         },
         {
-          "html": "Demonondalinks v <span class=\"win-p2\">Arfabubble Wins Pending</span>",
+          "html": "<b>Demonondalinks (W/O)</b> v Arfabubble",
           "p1": "Demonondalinks",
           "p2": "Arfabubble",
           "scores": {
@@ -4532,7 +4532,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "Bart-NoWorries v <span class=\"win-p2\">Colly45x Wins 4 & 2</span>",
@@ -4747,7 +4747,7 @@
         "5",
         "6"
       ],
-      "walkover": null
+      "walkover": "p2"
     },
     {
       "id": 1784966234225,
@@ -4814,7 +4814,7 @@
         "5",
         "5"
       ],
-      "walkover": null
+      "walkover": "p2"
     },
     {
       "id": 1784966234597,
@@ -5015,7 +5015,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1784966235831,
