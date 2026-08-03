@@ -4829,7 +4829,7 @@
           "walkover": null
         },
         {
-          "html": "Demonondalinks v <span class=\"win-p2\">BIGavoLEO Wins Pending</span>",
+          "html": "<b>Demonondalinks (W/O)</b> v BIGavoLEO",
           "p1": "Demonondalinks",
           "p2": "BIGavoLEO",
           "scores": {
@@ -4874,7 +4874,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "Bullfrog v <span class=\"win-p2\">Colly45x Wins 3 & 2</span>",
@@ -5338,7 +5338,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1785400337805,
