@@ -5123,7 +5123,7 @@
           "walkover": null
         },
         {
-          "html": "Hammers1man72 v <span class=\"win-p2\">Hopz Wins Pending</span>",
+          "html": "<b>Hammers1man72 (W/O)</b> v Hopz",
           "p1": "Hammers1man72",
           "p2": "Hopz",
           "scores": {
@@ -5168,7 +5168,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "Demonondalinks v <span class=\"win-p2\">Keep_of_Kalessin Wins 6 & 5</span>",
@@ -5315,7 +5315,7 @@
           "walkover": "p1"
         },
         {
-          "html": "Bullfrog v <span class=\"win-p2\">Guillaume Moreau Wins Pending</span>",
+          "html": "<b>Bullfrog (W/O)</b> v Guillaume Moreau",
           "p1": "Bullfrog",
           "p2": "Guillaume Moreau",
           "scores": {
@@ -5360,7 +5360,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "<span class=\"win-p1\">Wins 7 & 5 Mr Longpole</span> v Gordo",
@@ -5411,28 +5411,28 @@
           "walkover": null
         },
         {
-          "html": "Bart-NoWorries v <span class=\"win-p2\">WingisBack Wins Pending</span>",
+          "html": "Bart-NoWorries v <span class=\"win-p2\">WingisBack Wins 2 & 1</span>",
           "p1": "Bart-NoWorries",
           "p2": "WingisBack",
           "scores": {
             "p1": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
+              "4",
+              "4",
+              "2",
+              "5",
+              "4",
+              "10",
+              "4",
+              "3",
+              "3",
+              "4",
+              "6",
+              "3",
+              "4",
+              "4",
+              "5",
+              "4",
+              "4",
               ""
             ],
             "p2": [
@@ -5453,7 +5453,7 @@
               "4",
               "4",
               "4",
-              "4"
+              ""
             ]
           },
           "walkover": null
@@ -5594,7 +5594,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1785932442820,
@@ -5862,7 +5862,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1785932444295,
@@ -5957,23 +5957,23 @@
         "5"
       ],
       "p1Scores": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "4",
+        "4",
+        "2",
+        "5",
+        "4",
+        "10",
+        "4",
+        "3",
+        "3",
+        "4",
+        "6",
+        "3",
+        "4",
+        "4",
+        "5",
+        "4",
+        "4",
         ""
       ],
       "p2Scores": [
@@ -5994,7 +5994,7 @@
         "4",
         "4",
         "4",
-        "4"
+        ""
       ],
       "walkover": null
     }
