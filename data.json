@@ -5465,29 +5465,29 @@
       "label": "Week 15 @ Turning Stone - Atunyote",
       "results": [
         {
-          "html": "Horusphoenix v <span class=\"win-p2\">Hopz Wins Pending</span>",
+          "html": "<b>Horusphoenix (W/O)</b> v Hopz",
           "p1": "Horusphoenix",
           "p2": "Hopz",
           "scores": {
             "p1": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "4",
+              "4",
+              "3",
+              "3",
+              "4",
+              "3",
+              "4",
+              "5",
+              "4",
+              "4",
+              "2",
+              "4",
+              "4",
+              "4",
+              "4",
+              "3",
+              "4",
+              "4"
             ],
             "p2": [
               "",
@@ -5510,7 +5510,7 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
           "html": "Demonondalinks v <span class=\"win-p2\">x3offthetee Wins 2 & 1</span>",
@@ -5705,7 +5705,7 @@
           "walkover": null
         },
         {
-          "html": "Mr Longpole v <span class=\"win-p2\">BIGavoLEO Wins Pending</span>",
+          "html": "<b>Mr Longpole (W/O)</b> v BIGavoLEO",
           "p1": "Mr Longpole",
           "p2": "BIGavoLEO",
           "scores": {
@@ -5750,10 +5750,10 @@
               ""
             ]
           },
-          "walkover": null
+          "walkover": "p1"
         },
         {
-          "html": "Bullfrog v <span class=\"win-p2\">WingisBack Wins Pending</span>",
+          "html": "Bullfrog v <b>WingisBack (W/O)</b>",
           "p1": "Bullfrog",
           "p2": "WingisBack",
           "scores": {
@@ -5798,10 +5798,10 @@
               "4"
             ]
           },
-          "walkover": null
+          "walkover": "p2"
         },
         {
-          "html": "Arfabubble v <span class=\"win-p2\">Bart-NoWorries Wins Pending</span>",
+          "html": "Arfabubble v <b>Bart-NoWorries (W/O)</b>",
           "p1": "Arfabubble",
           "p2": "Bart-NoWorries",
           "scores": {
@@ -5826,27 +5826,27 @@
               ""
             ],
             "p2": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "5",
+              "5",
+              "4",
+              "5",
+              "7",
+              "5",
+              "5",
+              "5",
+              "5",
+              "5",
+              "3",
+              "5",
+              "5",
+              "5",
+              "5",
+              "5",
+              "4",
+              "4"
             ]
           },
-          "walkover": null
+          "walkover": "p2"
         }
       ]
     }
@@ -5878,24 +5878,24 @@
         "5"
       ],
       "p1Scores": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "4",
+        "4",
+        "3",
+        "3",
+        "4",
+        "3",
+        "4",
+        "5",
+        "4",
+        "4",
+        "2",
+        "4",
+        "4",
+        "4",
+        "4",
+        "3",
+        "4",
+        "4"
       ],
       "p2Scores": [
         "",
@@ -5917,7 +5917,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1786351715475,
@@ -6252,7 +6252,7 @@
         "",
         ""
       ],
-      "walkover": null
+      "walkover": "p1"
     },
     {
       "id": 1786351717177,
@@ -6319,7 +6319,7 @@
         "3",
         "4"
       ],
-      "walkover": null
+      "walkover": "p2"
     },
     {
       "id": 1786351717500,
@@ -6367,26 +6367,26 @@
         ""
       ],
       "p2Scores": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "5",
+        "5",
+        "4",
+        "5",
+        "7",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "3",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "4",
+        "4"
       ],
-      "walkover": null
+      "walkover": "p2"
     }
   ],
   "playerPool": [
